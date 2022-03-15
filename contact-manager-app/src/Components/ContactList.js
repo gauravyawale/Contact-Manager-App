@@ -14,7 +14,7 @@ function ContactList (props){
   });
 
   return (
-  <div className="ui container">
+  <div className="ui fluid container">
   <div style={{fontSize:"24px", marginTop:"70px", fontWeight:"bold"}}>Contact List <Link to="/add"> <button className="ui button blue" style={{marginLeft:"160px"}}>Add Contact</button> </Link> </div>
   <div className="ui list">{renderedContact}</div>
   </div>

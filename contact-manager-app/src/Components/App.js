@@ -3,6 +3,7 @@ import React, { useState, useEffect } from "react";
 import Header from "./Header";
 import ContactList from "./ContactList";
 import AddContact from "./AddContact";
+import DisplayCard from "./DisplayCard";
 import { v4 as uuidv4 } from "uuid";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
@@ -52,6 +53,8 @@ function App() {
             path="/add"
             element={<AddContact handleAddContact={handleAddContact} />}
           />
+
+          <Route exact path={`/contact/:id`} element={<DisplayCard />} />
 
           {/* <AddContact handleAddContact={handleAddContact} /></Route> */}
           {/* <ContactList contacts={contacts} getContact={handleDeleteContact} /> */}
